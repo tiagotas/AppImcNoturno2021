@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppImcNoturno.MainPage"
+             BackgroundColor="#CCC">
+    
+    <StackLayout>
+        <Label Text="Calcule seu Índice de Massa Corporal"
+               FontSize="Title"
+               HorizontalTextAlignment="Center"
+               FontAttributes="Bold"
+               TextTransform="Uppercase"
+               Padding="10"/>
+
+        <Frame CornerRadius="10" 
+               Margin="10"
+               BackgroundColor="#EEE"
+               Padding="0">
+
+            <StackLayout Margin="10">
+
+                <Label Text="Sua Altura:" HorizontalTextAlignment="Center" />
+                <Entry Keyboard="Numeric" Placeholder="Em metros, ex: 1,77" />
+
+                <Label Text="Seu Peso:" HorizontalTextAlignment="Center" />
+                <Entry Keyboard="Numeric" Placeholder="Em kilos, ex: 85" />
+
+                <Button Text="Calcular"
+                    HorizontalOptions="Center"
+                    Clicked="Button_Clicked" />
+
+                <Label Text="Valores de Referência" FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       TextTransform="Uppercase"/>
+
+                <TableView x:Name="v_referencia" IsVisible="False">
+                    <TableRoot>
+                        <TableSection>
+                            <TextCell Text="Abaixo de 17 - Muito Abaixo do Peso"></TextCell>
+                            <TextCell Text="Entre 17 e 18,49 - Abaixo do Peso"></TextCell>
+                            <TextCell Text="Entre 18,5 e 24,99 - Peso Normal"></TextCell>
+                            <TextCell Text="Entre 25 e 29,99 - Acima do Peso"></TextCell>
+                            <TextCell Text="Entre 30 e 34,99- Obesidade I"></TextCell>
+                            <TextCell Text="Entre 35 - 39,99 - Obesidade II"></TextCell>
+                            <TextCell Text="Acima de 40 - Obesidade III"></TextCell>
+                        </TableSection>
+                    </TableRoot>
+                </TableView>
+
+    </StackLayout>
+        </Frame>
+    
+    </StackLayout>
+
+</ContentPage>
