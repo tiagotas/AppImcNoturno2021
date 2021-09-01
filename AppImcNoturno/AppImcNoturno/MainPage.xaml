@@ -20,14 +20,20 @@
             <StackLayout Margin="10">
 
                 <Label Text="Sua Altura:" HorizontalTextAlignment="Center" />
-                <Entry Keyboard="Numeric" Placeholder="Em metros, ex: 1,77" />
+                <Entry x:Name="txt_altura" Keyboard="Numeric" Placeholder="Em metros, ex: 1,77" />
 
                 <Label Text="Seu Peso:" HorizontalTextAlignment="Center" />
-                <Entry Keyboard="Numeric" Placeholder="Em kilos, ex: 85" />
+                <Entry x:Name="txt_peso" Placeholder="Em kilos, ex: 85" />
 
                 <Button Text="Calcular"
                     HorizontalOptions="Center"
                     Clicked="Button_Clicked" />
+
+                <Label x:Name="lbl_resultado"
+                       TextColor="Red"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Title"
+                       Text="Resultado" />
 
                 <Label Text="Valores de Referência" FontAttributes="Bold"
                        HorizontalTextAlignment="Center"
